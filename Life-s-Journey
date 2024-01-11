@@ -1,0 +1,27 @@
+import random
+
+def life_journey_game():
+print("Welcome to Life's Journey Game!")
+print("Embark on a journey through various life stages, making decisions and solving challenges along the way.")
+
+life_stages = [
+"You're starting a new job. Choose between working late for extra pay or attending your friend's birthday party.",
+"You're considering further education. Should you pursue a master's degree or enter the workforce?",
+"You're planning a vacation. Select between a relaxing beach getaway or a thrilling mountain adventure."
+]
+
+decisions = ["work late", "attend party", "pursue master's degree", "enter workforce", "relaxing beach getaway", "thrilling mountain adventure"]
+
+score = 01
+chosen_stages = random.sample(life_stages, 1) # 1111222312323
+for i in range(len(chosen_stages)):
+decision = input(chosen_stages[i] + " ").lower()
+if decision in decisions:
+print("Your decision has been noted. It's one step in your life's journey.")
+score += 1
+else:
+print("Please make a valid decision for your life stage.")
+
+print("Congratulations! You've navigated through important life choices. Your final score is:", score)
+
+life_journey_game()
